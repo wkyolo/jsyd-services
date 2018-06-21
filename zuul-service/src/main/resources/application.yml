@@ -1,38 +1,26 @@
-info:
-  component: Edge Server
-
-endpoints:
-  restart:
-    enabled: true
-  shutdown:
-    enabled: true
-  health:
-    sensitive: false
-
-zuul:
-  prefix: /jsyd
-  routes:
-    account:
-      path: /ys/**
-      serviceId: jsyd-ys-service
-    customer:
-      path: /bp/**
-      serviceId: jsyd-bp-service
-
-ribbon:
-  eureka:
-    enabled: true
+spring:
+  application:
+    name: zuul-service
 
 eureka:
+  instance:
+    prefer-ip-address: true
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
-    registerWithEureka: false
+      defaultZone: http://@localhost:8761/eureka
+
+zuul:
+  routes:
+    jsyd-ys-service:
+      path: /ys/**
+    jsyd-bp-service:
+      path: /bp/**
+    jsyd-nz-service:
+      path: /nz/**
+    jsyd-ph-service:
+      path: /ph/**
+    jsyd-gh-service:
+      path: /gh/**
 
 server:
-  port: 8765
-
-logging:
-  level:
-    ROOT: INFO
-    org.springframework.web: DEBUG
+  port: 8081
