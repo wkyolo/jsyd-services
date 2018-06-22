@@ -14,8 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/ys")
-@Api(description = "预审业务API接口")
+@Api(description = "预审业务API接口", tags = "YS")
 public class YsApi {
 
     private YsjbxxService ysjbxxService;

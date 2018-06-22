@@ -7,12 +7,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class BpApi {
 
-    @RequestMapping("/bp")
+    @RequestMapping("/")
     public String bpApi(){
         return "建设用地报批微服务接口";
     }
 
-    @RequestMapping("/bp/{id}")
+    @RequestMapping("/{id}")
     public String bpApiId(@PathVariable("id") String id){
         return String.format("建设用地报批微服务接口{ %s }", id);
     }

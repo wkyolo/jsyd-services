@@ -9,7 +9,7 @@ import java.util.Date;
 
 @ApiModel(description = "预审基本信息")
 public class Ysjbxx {
-    @ApiModelProperty(notes = "${ysjbxx.xmguid}", required = true, position = 0)
+    @ApiModelProperty(notes = "${ysjbxx.xmguid}", required = true)
     @NotNull
     private String xmguid;
 

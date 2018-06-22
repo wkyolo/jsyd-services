@@ -3,16 +3,16 @@ package com.shine.jsyd.ys.model;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
-@ApiModel(description = "测试")
+@ApiModel(description = "Test")
 public class Person {
 
-    @ApiModelProperty(notes = "姓名")
+    @ApiModelProperty(notes = "Name")
     private String name;
 
-    @ApiModelProperty(notes = "性别")
+    @ApiModelProperty(notes = "Sex")
     private String sex;
 
-    @ApiModelProperty(notes = "年龄")
+    @ApiModelProperty(notes = "Age")
     private int age;
 
     public void setName(String name) {
