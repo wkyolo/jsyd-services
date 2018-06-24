@@ -3,7 +3,6 @@ package com.shine.jsyd.ys.model;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import org.hibernate.validator.constraints.NotBlank;
-
 import javax.validation.constraints.*;
 import java.util.Date;
 
@@ -13,36 +12,36 @@ public class Ysjbxx {
     @NotNull
     private String xmguid;
 
-    @ApiModelProperty(notes = "项目名称")
+    @ApiModelProperty(notes = "项目名称", position = 1)
     @NotBlank
     @Size(min = 1, max = 200)
     private String xmmc;
 
-    @ApiModelProperty(notes = "县市代码")
+    @ApiModelProperty(notes = "县市代码", position = 2)
     private String xsdm;
 
-    @ApiModelProperty(notes = "指标类型")
+    @ApiModelProperty(notes = "指标类型", position = 3)
     private String zblx;
 
-    @ApiModelProperty(notes = "申请单位")
+    @ApiModelProperty(notes = "申请单位", position = 4)
     private String sqdw;
 
-    @ApiModelProperty(notes = "申请日期")
+    @ApiModelProperty(notes = "申请日期", position = 5)
     private Date sqrq;
 
-    @ApiModelProperty(notes = "项目编号")
+    @ApiModelProperty(notes = "项目编号", position = 6)
     private String xmbh;
 
-    @ApiModelProperty(notes = "项目总面积")
+    @ApiModelProperty(notes = "项目总面积", position = 7)
     private Double xmzmj;
 
-    @ApiModelProperty(notes = "农用地面积")
+    @ApiModelProperty(notes = "农用地面积", position = 8)
     private Double nydmj;
 
-    @ApiModelProperty(notes = "耕地面积")
+    @ApiModelProperty(notes = "耕地面积", position = 9)
     private Double gdmj;
 
-    @ApiModelProperty(notes = "办件库推送状态")
+    @ApiModelProperty(notes = "办件库推送状态", hidden = true)
     private int bjkzt;
 
     public Ysjbxx(String xmguid, String xmmc, String xsdm, String zblx){

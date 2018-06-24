@@ -36,8 +36,8 @@ public class SpringFoxConfig {
 
     private ApiInfo getApiInfo() {
         return new ApiInfo(
-                "建设用地预审微服务API接口",
-                "建设用地预审业务相关接口说明",
+                "标题：建设用地预审微服务API接口",
+                "描述：建设用地预审业务相关接口说明",
                 "1.0.0",
                 "TERMS OF SERVICE URL",
                 new Contact("Wang Meinan", "http://www.wangmeinan.com", "wangmeinan@gmail.com"),

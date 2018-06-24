@@ -27,7 +27,7 @@ public class SwaggerConfig {
                 "描述：建设用地业务相关接口说明",
                 "1.0.0",
                 "TERMS OF SERVICE URL",
-                new Contact("冷清秋", "http://www.wangmeinan.com", "wangmeinan@gmail.com"),
+                new Contact("Wang Meinan", "http://www.wangmeinan.com", "wangmeinan@gmail.com"),
                 "MIT Licence",
                 "LICENCE URL",
                 Collections.<VendorExtension>emptyList()

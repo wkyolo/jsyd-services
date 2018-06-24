@@ -16,8 +16,11 @@ public class DocumentationConfig implements SwaggerResourcesProvider{
     @Override
     public List<SwaggerResource> get() {
         List<SwaggerResource> resources = new ArrayList<SwaggerResource>();
-        resources.add(swaggerResource("预审", "/ys/v2/api-docs", "2.0"));
-        resources.add(swaggerResource("报批", "/bp/v2/api-docs", "2.0"));
+        resources.add(swaggerResource("预审", "/jsyd/ys/v2/api-docs", "2.0"));
+        resources.add(swaggerResource("报批", "/jsyd/bp/v2/api-docs", "2.0"));
+        resources.add(swaggerResource("农整", "/jsyd/nz/v2/api-docs", "2.0"));
+        resources.add(swaggerResource("规划", "/jsyd/gh/v2/api-docs", "2.0"));
+        resources.add(swaggerResource("盘活", "/jsyd/ph/v2/api-docs", "2.0"));
         return resources;
     }
 

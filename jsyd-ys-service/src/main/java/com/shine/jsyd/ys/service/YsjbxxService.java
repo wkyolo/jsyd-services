@@ -2,7 +2,6 @@ package com.shine.jsyd.ys.service;
 
 import com.shine.jsyd.ys.model.Ysjbxx;
 import org.springframework.stereotype.Service;
-
 import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.List;

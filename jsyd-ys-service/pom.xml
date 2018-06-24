@@ -6,21 +6,12 @@
         <artifactId>jsyd-services</artifactId>
         <groupId>com.shine.jsyd</groupId>
         <version>1.0.0</version>
-
-        <!--
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.10.RELEASE</version>
-        -->
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>jsyd-ys-service</artifactId>
 
     <properties>
-        <!--
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        -->
         <springfox.version>2.8.0</springfox.version>
     </properties>
 
@@ -37,13 +28,11 @@
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>
-            <version>${springfox.version}</version>
         </dependency>
         <!-- swagger ui -->
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger-ui</artifactId>
-            <version>${springfox.version}</version>
         </dependency>
         <!-- JSR-303 -->
         <dependency>

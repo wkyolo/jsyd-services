@@ -1,4 +1,4 @@
-package com.shine.jsyd.ys.api;
+package com.shine.jsyd.ys.controller;
 
 import com.shine.jsyd.ys.model.Ysjbxx;
 import com.shine.jsyd.ys.service.YsjbxxService;
@@ -14,9 +14,9 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/ys")
-@Api(description = "预审业务API接口")
-public class YsApi {
+@RequestMapping("/api")//RequestMapping 没有会导致SWAGGER-UI出错
+@Api(description = "预审业务API接口", tags = "YS")
+public class YsjbxxController {
 
     private YsjbxxService ysjbxxService;
 
@@ -30,13 +30,13 @@ public class YsApi {
 
     @RequestMapping(method = RequestMethod.GET, path = "/jbxx", produces = "text/plain")
     @ApiOperation("预审业务概况")
-    public String ysApi(){
+    public String getYsjbxx(){
         return "建设用地预审微服务--基本信息接口";
     }
 
     @RequestMapping(method = RequestMethod.GET, path = "/{id}", produces = "text/plain")
     @ApiOperation("预审子业务基本信息")
-    public String ysApiId(@ApiParam("业务ID") @PathVariable("id") String id){
+    public String getYsjbxxId(@ApiParam("业务ID") @PathVariable("id") String id){
         return String.format("建设用地预审微服务接口{ %s }", id);
     }
 

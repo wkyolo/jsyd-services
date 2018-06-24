@@ -3,24 +3,41 @@ spring:
     name: zuul-service
 
 eureka:
-  instance:
-    prefer-ip-address: true
   client:
+    healthcheck:
+      enabled: true
     serviceUrl:
-      defaultZone: http://@localhost:8761/eureka
+      defaultZone: http://@localhost:8761/eureka # http://admin:123@localhost:8761/eureka/
+  instance:
+    status-page-url: http://${spring.cloud.client.ipAddress}:${server.port}/swagger-ui.html
 
 zuul:
+  #忽略自动生成微服务路径
+  ignored-services: "*"
+  prefix: "/jsyd"
   routes:
-    jsyd-ys-service:
-      path: /ys/**
-    jsyd-bp-service:
-      path: /bp/**
-    jsyd-nz-service:
-      path: /nz/**
-    jsyd-ph-service:
-      path: /ph/**
-    jsyd-gh-service:
-      path: /gh/**
+    jsyd-ys-service: /ys/**
+    jsyd-bp-service: /bp/**
+    jsyd-gh-service: /gh/**
+    jsyd-nz-service: /nz/**
+    jsyd-ph-service: /ph/**
 
 server:
-  port: 8081
+  port: 8762
+
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    #启用shutdown 可以通过post请求 http://微服务地址：port/shutdown 停止服务 需要结合安全验证才能在生产环境启动该功能
+    enabled: true
+    #禁用密码验证
+    sensitive: false
+  health:
+    sensitive: false
+
+
+logging:
+  level:
+    ROOT: INFO
+    org.springframework.web: DEBUG
